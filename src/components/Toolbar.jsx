@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../images/logo.png";
+import LanguageSelector from "./LanguageSelector";
 
 const ToolbarContainer = styled.div`
   background-color: #000;
@@ -43,7 +44,7 @@ const Toolbar = ({ title }) => {
         <Title>{title}</Title>
       </LogoTitleContainer>
 
-      <Button>Internacionalizacion</Button>
+      <LanguageSelector />
     </ToolbarContainer>
   );
 };
