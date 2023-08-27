@@ -1,9 +1,24 @@
+import styled from "styled-components";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Toolbar from "./components/Toolbar";
+import Characters from "./components/Characters";
+
+const queryClient = new QueryClient();
+
 function App() {
+  const Main = styled.main`
+    background-color: #02040e;
+    color: white;
+    min-height: 100vh;
+  `;
+
   return (
-    <div>
-      <h1>Hello!</h1>
-      <h2>Good to see you here...</h2>
-    </div>
+    <Main>
+      <QueryClientProvider client={queryClient}>
+        <Toolbar title="Rick and morty" />
+        <Characters />
+      </QueryClientProvider>
+    </Main>
   );
 }
 

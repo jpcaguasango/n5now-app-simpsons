@@ -1,7 +1,10 @@
 {
-  "extends": [
-    "react-important-stuff",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["react-important-stuff", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "babelOptions": {
+      "plugins": ["@babel/plugin-proposal-class-properties"]
+    }
+  },
+  "plugins": ["@babel"],
   "parser": "@babel/eslint-parser"
 }
