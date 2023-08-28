@@ -1,16 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
+import { QueryKeys } from "../helpers/enums/queryKeys";
 import { getCharacters } from "../api/characterApi";
 import { Status } from "../helpers/enums/status";
-import { QueryKeys } from "../helpers/enums/queryKeys";
-import { useTranslation } from "react-i18next";
-import CardCharacter from "./CardCharacter";
 import styled from "styled-components";
+import CardCharacter from "./CardCharacter";
+import EmptyImg from "../images/empty.svg";
+import EmptyState from "./EmptyState";
+import Paginator from "./Pagination";
 import Spinner from "./Spinner";
 import Search from "./Search";
-import Paginator from "./Pagination";
-import EmptyState from "./EmptyState";
-import EmptyImg from "../images/empty.svg";
 
 const ContainerCharacters = styled.div`
   display: flex;
@@ -82,7 +82,7 @@ function Characters() {
           img={character.image}
           name={character.name}
           gender={character.gender}
-          species={character.species}
+          occupation={character.occupation}
           key={character.name + index}
         />
       ))

@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Colors } from "../helpers/enums/colors";
+
+const { BgBlue, BgYellow } = Colors;
 
 const PaginatorContainer = styled.div`
   display: flex;
@@ -11,7 +14,7 @@ const PageButton = styled.button`
   padding: 8px 16px;
   margin: 0 5px;
   border: none;
-  background-color: ${(props) => (props.active ? "#41b57f" : "#000")};
+  background-color: ${(props) => (props.active ? BgBlue : BgYellow)};
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
@@ -20,7 +23,7 @@ const PageButton = styled.button`
 const ArrowButton = styled.button`
   padding: 8px 16px;
   border: none;
-  background-color: #000;
+  background-color: ${BgYellow};
   color: #fff;
   cursor: pointer;
   border-radius: 5px;

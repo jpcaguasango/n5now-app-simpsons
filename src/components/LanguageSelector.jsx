@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-// import { useTranslation } from "react-i18next";
 import i18n from "../language/i18n";
 import styled from "styled-components";
+import { Colors } from "../helpers/enums/colors.js";
+
+const { BgBlue } = Colors;
 
 const Button = styled.button`
   padding: 4px 8px;
   border: none;
   border-radius: 4px;
   background-color: ${({ lang, activeLang }) =>
-    lang === activeLang ? "#41b57f" : "#000"};
+    lang === activeLang ? BgBlue : "#FBD85D"};
   color: #fff;
   cursor: pointer;
   margin: 0px 4px;

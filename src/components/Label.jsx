@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import { Colors } from "../helpers/enums/colors";
+
+const { Grey } = Colors;
 
 const LabelText = styled.label`
   font-size: 10px;
-  color: #ddd;
+  font-weight: bold;
+  color: ${Grey};
   padding: 0px 4px;
 `;
 

@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { Colors } from "../helpers/enums/colors";
+
+const { GreyLight } = Colors;
 
 const SearchContainer = styled.div`
   display: flex;
@@ -10,7 +13,7 @@ const SearchContainer = styled.div`
 
 const SearchInput = styled.input`
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid ${GreyLight};
   border-radius: 5px;
   width: 300px;
   font-size: 14px;

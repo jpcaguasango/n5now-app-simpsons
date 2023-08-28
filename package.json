@@ -1,7 +1,7 @@
 {
-  "name": "@n5now/app-rick-and-morty",
+  "name": "@n5now/app-simpsons",
   "scripts": {
-    "start": "webpack serve --port=5001",
+    "start": "webpack serve --port=5002",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",

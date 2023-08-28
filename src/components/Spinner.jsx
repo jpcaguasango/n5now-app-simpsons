@@ -1,4 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { Colors } from "../helpers/enums/colors";
+
+const { BgYellow } = Colors;
 
 const spin = keyframes`
     0% { transform: rotate(0deg); }
@@ -21,7 +24,7 @@ const SpinnerContent = styled.div`
 
 const SpinnerCircle = styled.div`
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #41b57f;
+  border-top: 4px solid ${BgYellow};
   border-radius: 50%;
   width: 50px;
   height: 50px;
