@@ -27,7 +27,7 @@ function EmptyState({ text, img }) {
   return (
     <EmptyStateContainer>
       <EmptyStateContent>
-        <EmptyStateImage src={img} />
+        <EmptyStateImage src={img} alt="empty" />
         <EmptyStateText>{text}</EmptyStateText>
       </EmptyStateContent>
     </EmptyStateContainer>

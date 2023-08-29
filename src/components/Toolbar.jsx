@@ -34,7 +34,7 @@ const Toolbar = ({ title }) => {
   return (
     <ToolbarContainer>
       <LogoTitleContainer>
-        <Logo src={logo}></Logo>
+        <Logo src={logo} alt="logo"></Logo>
         <Title>{title}</Title>
       </LogoTitleContainer>
       <LanguageSelector />

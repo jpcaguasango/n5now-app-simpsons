@@ -9,12 +9,12 @@ const Button = styled.button`
   padding: 4px 8px;
   border: none;
   border-radius: 4px;
-  background-color: ${({ lang, activeLang }) =>
-    lang === activeLang ? BgBlue : "#FBD85D"};
+  background-color: ${({ lang, active }) =>
+    lang === active ? BgBlue : "#FBD85D"};
   color: #fff;
   cursor: pointer;
   margin: 0px 4px;
-  font-weight: ${({ lang, activeLang }) => (lang === activeLang ? "bold" : "")};
+  font-weight: ${({ lang, active }) => (lang === active ? "bold" : "")};
 `;
 
 function LanguageSelector() {
@@ -28,14 +28,14 @@ function LanguageSelector() {
     <div>
       <Button
         lang="en"
-        activeLang={activeLang}
+        active={activeLang}
         onClick={() => changeLanguage("en")}
       >
         EN
       </Button>
       <Button
         lang="es"
-        activeLang={activeLang}
+        active={activeLang}
         onClick={() => changeLanguage("es")}
       >
         ES
