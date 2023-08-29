@@ -81,7 +81,7 @@ function Characters() {
         <CardCharacter
           img={character.image}
           name={character.name}
-          gender={character.gender}
+          gender={character.gender.toLowerCase()}
           occupation={character.occupation}
           key={character.name + index}
         />

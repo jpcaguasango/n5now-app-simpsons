@@ -69,7 +69,7 @@ function CardCharacter({ name, img, gender, occupation }) {
         <div>
           <Label text={t("character.gender.label")} />
           <Tag
-            text={t(`character.gender.${gender.toLowerCase()}`)}
+            text={t(`character.gender.${gender}`)}
             background={bgGender}
             color="white"
           />

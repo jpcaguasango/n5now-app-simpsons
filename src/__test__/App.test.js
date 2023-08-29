@@ -18,4 +18,10 @@ describe("App", () => {
     const { getByText } = render(<App />);
     expect(getByText(/Consultando información/i)).toBeInTheDocument();
   });
+
+  it("displays correct internationalization", () => {
+    const { getByText } = render(<App />);
+    expect(getByText(/EN/i)).toBeInTheDocument();
+    expect(getByText(/ES/i)).toBeInTheDocument();
+  });
 });
