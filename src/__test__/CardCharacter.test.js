@@ -15,42 +15,42 @@ describe("CardCharacter component", () => {
 
   it("displays correct name", () => {
     const name = "John Doe";
-    render(
+    const { getByText } = render(
       <I18nextProvider i18n={i18n}>
         <CardCharacter name={name} />
       </I18nextProvider>
     );
-    expect(screen.getByText(name)).toBeInTheDocument();
+    expect(getByText(name)).toBeInTheDocument();
   });
 
   it("displays correct image", () => {
     const imgSrc = "path/to/image.jpg";
-    render(
+    const { getByRole } = render(
       <I18nextProvider i18n={i18n}>
         <CardCharacter img={imgSrc} />
       </I18nextProvider>
     );
-    const imageElement = screen.getByRole("img");
+    const imageElement = getByRole("img");
     expect(imageElement).toHaveAttribute("src", imgSrc);
   });
 
   it("displays correct gender tag", () => {
     const gender = "male";
-    render(
+    const { getByText } = render(
       <I18nextProvider i18n={i18n}>
         <CardCharacter gender={gender} />
       </I18nextProvider>
     );
-    expect(screen.getByText("Hombre")).toBeInTheDocument();
+    expect(getByText("Hombre")).toBeInTheDocument();
   });
 
   it("displays correct occupation", () => {
     const occupation = "Engineer";
-    render(
+    const { getByText } = render(
       <I18nextProvider i18n={i18n}>
         <CardCharacter occupation={occupation} />
       </I18nextProvider>
     );
-    expect(screen.getByText(occupation)).toBeInTheDocument();
+    expect(getByText(occupation)).toBeInTheDocument();
   });
 });
